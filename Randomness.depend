@@ -9,3 +9,40 @@
 	<SDL.h>
 	<SDL_image.h>
 
+1760437639 source:c:\users\ethan\dropbox\coding\demo\main.cpp
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_ttf.h>
+	<iostream>
+	"Window.h"
+	"Intro.h"
+
+1760437414 source:c:\users\ethan\dropbox\coding\demo\src\window.cpp
+	<SDL.h>
+	<SDL_image.h>
+	<iostream>
+	"Window.h"
+	"Intro.h"
+	"Label.h"
+
+1760437567 c:\users\ethan\dropbox\coding\demo\include\window.h
+	<SDL.h>
+	<SDL_image.h>
+
+1760437358 source:c:\users\ethan\dropbox\coding\demo\src\intro.cpp
+	"Intro.h"
+
+1760438245 c:\users\ethan\dropbox\coding\demo\include\intro.h
+	<SDL.h>
+	<SDL_ttf.h>
+	<string>
+	"Label.h"
+
+1760437359 c:\users\ethan\dropbox\coding\demo\include\label.h
+	<SDL.h>
+	<SDL_ttf.h>
+	<string>
+
+1760437944 source:c:\users\ethan\dropbox\coding\demo\src\label.cpp
+	"Label.h"
+
