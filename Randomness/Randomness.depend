@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1760435677 source:c:\users\ethan\dropbox\coding\demo\randomness\main.cpp
+	<SDL.h>
+	<SDL_image.h>
+	<iostream>
+	"Game.h"
+
+1760435677 c:\users\ethan\dropbox\coding\demo\randomness\include\game.h
+	<SDL.h>
+	<SDL_image.h>
+
