@@ -9,13 +9,14 @@
 	<SDL.h>
 	<SDL_image.h>
 
-1760437639 source:c:\users\ethan\dropbox\coding\demo\main.cpp
+1760445131 source:c:\users\ethan\dropbox\coding\demo\main.cpp
 	<SDL.h>
 	<SDL_image.h>
 	<SDL_ttf.h>
 	<iostream>
 	"Window.h"
 	"Intro.h"
+	"Video.h"
 
 1760437414 source:c:\users\ethan\dropbox\coding\demo\src\window.cpp
 	<SDL.h>
@@ -29,7 +30,7 @@
 	<SDL.h>
 	<SDL_image.h>
 
-1760437358 source:c:\users\ethan\dropbox\coding\demo\src\intro.cpp
+1760438245 source:c:\users\ethan\dropbox\coding\demo\src\intro.cpp
 	"Intro.h"
 
 1760438245 c:\users\ethan\dropbox\coding\demo\include\intro.h
@@ -45,4 +46,245 @@
 
 1760437944 source:c:\users\ethan\dropbox\coding\demo\src\label.cpp
 	"Label.h"
+
+1760445130 c:\users\ethan\dropbox\coding\demo\include\video.h
+	<libavformat/avformat.h>
+	<libavcodec/avcodec.h>
+	<libswscale/swscale.h>
+	<libavutil/imgutils.h>
+	<SDL.h>
+	<string>
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavformat\avformat.h
+	<stdio.h>
+	"libavcodec/codec_par.h"
+	"libavcodec/defs.h"
+	"libavcodec/packet.h"
+	"libavutil/dict.h"
+	"libavutil/log.h"
+	"avio.h"
+	"libavformat/version_major.h"
+	"libavformat/version.h"
+	"libavutil/frame.h"
+	"libavcodec/codec.h"
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavcodec\codec_par.h
+	<stdint.h>
+	"libavutil/avutil.h"
+	"libavutil/channel_layout.h"
+	"libavutil/rational.h"
+	"libavutil/pixfmt.h"
+	"codec_id.h"
+	"defs.h"
+	"packet.h"
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\avutil.h
+	"common.h"
+	"rational.h"
+	"version.h"
+	"macros.h"
+	"mathematics.h"
+	"log.h"
+	"pixfmt.h"
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\common.h
+	<errno.h>
+	<inttypes.h>
+	<limits.h>
+	<math.h>
+	<stdint.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"attributes.h"
+	"error.h"
+	"macros.h"
+	"version.h"
+	"config.h"
+	"intmath.h"
+	"internal.h"
+	"mem.h"
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\attributes.h
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\error.h
+	<errno.h>
+	<stddef.h>
+	"macros.h"
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\macros.h
+	"libavutil/avconfig.h"
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\avconfig.h
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\version.h
+	"macros.h"
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\mem.h
+	<stddef.h>
+	<stdint.h>
+	"attributes.h"
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\rational.h
+	<stdint.h>
+	<limits.h>
+	"attributes.h"
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\mathematics.h
+	<stdint.h>
+	<math.h>
+	"attributes.h"
+	"rational.h"
+	"intfloat.h"
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\intfloat.h
+	<stdint.h>
+	"attributes.h"
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\log.h
+	<stdarg.h>
+	"attributes.h"
+	"version.h"
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\pixfmt.h
+	"libavutil/avconfig.h"
+	"version.h"
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\channel_layout.h
+	<stdint.h>
+	<stdlib.h>
+	"version.h"
+	"attributes.h"
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavcodec\codec_id.h
+	"libavutil/avutil.h"
+	"libavutil/samplefmt.h"
+	"version_major.h"
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\samplefmt.h
+	<stdint.h>
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavcodec\version_major.h
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavcodec\defs.h
+	<stdint.h>
+	<stdlib.h>
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavcodec\packet.h
+	<stddef.h>
+	<stdint.h>
+	"libavutil/attributes.h"
+	"libavutil/buffer.h"
+	"libavutil/dict.h"
+	"libavutil/rational.h"
+	"libavutil/version.h"
+	"libavcodec/version_major.h"
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\buffer.h
+	<stddef.h>
+	<stdint.h>
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\dict.h
+	<stdint.h>
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavformat\avio.h
+	<stdint.h>
+	<stdio.h>
+	"libavutil/attributes.h"
+	"libavutil/dict.h"
+	"libavutil/log.h"
+	"libavformat/version_major.h"
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavformat\version_major.h
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavformat\version.h
+	"libavutil/version.h"
+	"version_major.h"
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\frame.h
+	<stddef.h>
+	<stdint.h>
+	"avutil.h"
+	"buffer.h"
+	"channel_layout.h"
+	"dict.h"
+	"rational.h"
+	"samplefmt.h"
+	"pixfmt.h"
+	"version.h"
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavcodec\codec.h
+	<stdint.h>
+	"libavutil/avutil.h"
+	"libavutil/hwcontext.h"
+	"libavutil/log.h"
+	"libavutil/pixfmt.h"
+	"libavutil/rational.h"
+	"libavutil/samplefmt.h"
+	"libavcodec/codec_id.h"
+	"libavcodec/version_major.h"
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\hwcontext.h
+	"buffer.h"
+	"frame.h"
+	"log.h"
+	"pixfmt.h"
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavcodec\avcodec.h
+	"libavutil/samplefmt.h"
+	"libavutil/attributes.h"
+	"libavutil/avutil.h"
+	"libavutil/buffer.h"
+	"libavutil/channel_layout.h"
+	"libavutil/dict.h"
+	"libavutil/frame.h"
+	"libavutil/log.h"
+	"libavutil/pixfmt.h"
+	"libavutil/rational.h"
+	"codec.h"
+	"codec_id.h"
+	"defs.h"
+	"packet.h"
+	"version_major.h"
+	"version.h"
+	"codec_desc.h"
+	"codec_par.h"
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavcodec\version.h
+	"libavutil/version.h"
+	"version_major.h"
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavcodec\codec_desc.h
+	"libavutil/avutil.h"
+	"codec_id.h"
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libswscale\swscale.h
+	<stdint.h>
+	"libavutil/avutil.h"
+	"libavutil/frame.h"
+	"libavutil/log.h"
+	"libavutil/pixfmt.h"
+	"version_major.h"
+	"version.h"
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libswscale\version_major.h
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libswscale\version.h
+	"libavutil/version.h"
+	"version_major.h"
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\imgutils.h
+	<stddef.h>
+	<stdint.h>
+	"pixdesc.h"
+	"pixfmt.h"
+	"rational.h"
+
+1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\pixdesc.h
+	<inttypes.h>
+	"attributes.h"
+	"pixfmt.h"
+
+1760441253 source:c:\users\ethan\dropbox\coding\demo\src\video.cpp
+	"Video.h"
 

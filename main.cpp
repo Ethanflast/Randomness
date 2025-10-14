@@ -4,6 +4,7 @@
 #include <iostream>
 #include "Window.h"
 #include "Intro.h"
+#include "Video.h"
 
 int main(int argc, char* args[]) {
     if (SDL_Init(SDL_INIT_VIDEO) > 0)
@@ -19,7 +20,7 @@ int main(int argc, char* args[]) {
     if (font == NULL)
         std::cout << "Font load failed: " << TTF_GetError() << std::endl;
 
-    Intro intro(window.getRenderer(), font, "Made by someone", "Welcome to the slayer", 1280, 720, 1.2f, 4.0f);
+    Intro intro(window.getRenderer(), font, "Made by someone", "Welcome to the slayer", 1280, 720, 0.1f, 1.0f);
     intro.start();
 
     bool gameRunning = true;
@@ -43,8 +44,29 @@ int main(int argc, char* args[]) {
         intro.render();
         window.display();
 
-        if (intro.isDone())
-            gameRunning = false;
+        if (intro.isDone()) break;
+    }
+
+    if (gameRunning) {
+        VideoPlayer video(window.getRenderer(), "mambo.mp4");
+        if (video.open()) {
+            while (gameRunning && !video.isFinished()) {
+                while (SDL_PollEvent(&event)) {
+                    if (event.type == SDL_QUIT) {
+                        gameRunning = false;
+                        break;
+                    }
+                }
+                video.update();
+                SDL_SetRenderDrawColor(window.getRenderer(), 0, 0, 0, 255);
+                window.clear();
+                video.render(0, 0, 1280, 720);
+                window.display();
+                SDL_Delay(5);
+            }
+        } else {
+            std::cout << "Failed to open video file" << std::endl;
+        }
     }
 
     TTF_CloseFont(font);
