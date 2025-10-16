@@ -14,7 +14,7 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="include" />
-					<Add directory="C:/Users/ethan/Dropbox/Coding/demo/ffmpeg/include" />
+					<Add directory="D:/Randomness/ffmpeg/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-lws2_32 -lgdi32 -lwinmm" />
@@ -23,7 +23,7 @@
 					<Add library="avutil" />
 					<Add library="swscale" />
 					<Add library="swresample" />
-					<Add directory="C:/Users/ethan/Dropbox/Coding/demo/ffmpeg/lib" />
+					<Add directory="D:/Randomness/ffmpeg/lib" />
 				</Linker>
 			</Target>
 			<Target title="Release">

@@ -1,0 +1,27 @@
+# Build folders
+/bin/
+/obj/
+/Debug/
+/Release/
+/Setups/
+
+# CodeBlocks files
+*.cbp
+*.layout
+*.depend
+
+# Compiler files
+*.exe
+*.dll
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.pdb
+
+# File backup 
+*.log
+*.tmp
+*.bak
+*.cache

@@ -1,15 +1,34 @@
 # depslib dependency file v1.0
-1760435677 source:c:\users\ethan\dropbox\coding\demo\randomness\main.cpp
+1760585723 source:d:\randomness\src\intro.cpp
+	"Intro.h"
+
+1760585723 d:\randomness\include\intro.h
+	<SDL.h>
+	<SDL_ttf.h>
+	<string>
+	"Label.h"
+
+1760585723 d:\randomness\include\label.h
+	<SDL.h>
+	<SDL_ttf.h>
+	<string>
+
+1760585723 source:d:\randomness\src\label.cpp
+	"Label.h"
+
+1760585723 source:d:\randomness\src\window.cpp
 	<SDL.h>
 	<SDL_image.h>
 	<iostream>
-	"Game.h"
+	"Window.h"
+	"Intro.h"
+	"Label.h"
 
-1760435677 c:\users\ethan\dropbox\coding\demo\randomness\include\game.h
+1760585723 d:\randomness\include\window.h
 	<SDL.h>
 	<SDL_image.h>
 
-1760445131 source:c:\users\ethan\dropbox\coding\demo\main.cpp
+1760586345 source:d:\randomness\main.cpp
 	<SDL.h>
 	<SDL_image.h>
 	<SDL_ttf.h>
@@ -18,36 +37,7 @@
 	"Intro.h"
 	"Video.h"
 
-1760437414 source:c:\users\ethan\dropbox\coding\demo\src\window.cpp
-	<SDL.h>
-	<SDL_image.h>
-	<iostream>
-	"Window.h"
-	"Intro.h"
-	"Label.h"
-
-1760437567 c:\users\ethan\dropbox\coding\demo\include\window.h
-	<SDL.h>
-	<SDL_image.h>
-
-1760438245 source:c:\users\ethan\dropbox\coding\demo\src\intro.cpp
-	"Intro.h"
-
-1760438245 c:\users\ethan\dropbox\coding\demo\include\intro.h
-	<SDL.h>
-	<SDL_ttf.h>
-	<string>
-	"Label.h"
-
-1760437359 c:\users\ethan\dropbox\coding\demo\include\label.h
-	<SDL.h>
-	<SDL_ttf.h>
-	<string>
-
-1760437944 source:c:\users\ethan\dropbox\coding\demo\src\label.cpp
-	"Label.h"
-
-1760445130 c:\users\ethan\dropbox\coding\demo\include\video.h
+1760586345 d:\randomness\include\video.h
 	<libavformat/avformat.h>
 	<libavcodec/avcodec.h>
 	<libswscale/swscale.h>
@@ -55,7 +45,7 @@
 	<SDL.h>
 	<string>
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavformat\avformat.h
+1760459835 d:\randomness\ffmpeg\include\libavformat\avformat.h
 	<stdio.h>
 	"libavcodec/codec_par.h"
 	"libavcodec/defs.h"
@@ -68,7 +58,7 @@
 	"libavutil/frame.h"
 	"libavcodec/codec.h"
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavcodec\codec_par.h
+1760459835 d:\randomness\ffmpeg\include\libavcodec\codec_par.h
 	<stdint.h>
 	"libavutil/avutil.h"
 	"libavutil/channel_layout.h"
@@ -78,7 +68,7 @@
 	"defs.h"
 	"packet.h"
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\avutil.h
+1760459835 d:\randomness\ffmpeg\include\libavutil\avutil.h
 	"common.h"
 	"rational.h"
 	"version.h"
@@ -87,7 +77,7 @@
 	"log.h"
 	"pixfmt.h"
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\common.h
+1760459835 d:\randomness\ffmpeg\include\libavutil\common.h
 	<errno.h>
 	<inttypes.h>
 	<limits.h>
@@ -105,72 +95,72 @@
 	"internal.h"
 	"mem.h"
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\attributes.h
+1760459835 d:\randomness\ffmpeg\include\libavutil\attributes.h
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\error.h
+1760459835 d:\randomness\ffmpeg\include\libavutil\error.h
 	<errno.h>
 	<stddef.h>
 	"macros.h"
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\macros.h
+1760459835 d:\randomness\ffmpeg\include\libavutil\macros.h
 	"libavutil/avconfig.h"
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\avconfig.h
+1760459835 d:\randomness\ffmpeg\include\libavutil\avconfig.h
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\version.h
+1760459835 d:\randomness\ffmpeg\include\libavutil\version.h
 	"macros.h"
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\mem.h
+1760459835 d:\randomness\ffmpeg\include\libavutil\mem.h
 	<stddef.h>
 	<stdint.h>
 	"attributes.h"
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\rational.h
+1760459835 d:\randomness\ffmpeg\include\libavutil\rational.h
 	<stdint.h>
 	<limits.h>
 	"attributes.h"
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\mathematics.h
+1760459835 d:\randomness\ffmpeg\include\libavutil\mathematics.h
 	<stdint.h>
 	<math.h>
 	"attributes.h"
 	"rational.h"
 	"intfloat.h"
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\intfloat.h
+1760459835 d:\randomness\ffmpeg\include\libavutil\intfloat.h
 	<stdint.h>
 	"attributes.h"
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\log.h
+1760459835 d:\randomness\ffmpeg\include\libavutil\log.h
 	<stdarg.h>
 	"attributes.h"
 	"version.h"
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\pixfmt.h
+1760459835 d:\randomness\ffmpeg\include\libavutil\pixfmt.h
 	"libavutil/avconfig.h"
 	"version.h"
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\channel_layout.h
+1760459835 d:\randomness\ffmpeg\include\libavutil\channel_layout.h
 	<stdint.h>
 	<stdlib.h>
 	"version.h"
 	"attributes.h"
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavcodec\codec_id.h
+1760459835 d:\randomness\ffmpeg\include\libavcodec\codec_id.h
 	"libavutil/avutil.h"
 	"libavutil/samplefmt.h"
 	"version_major.h"
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\samplefmt.h
+1760459835 d:\randomness\ffmpeg\include\libavutil\samplefmt.h
 	<stdint.h>
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavcodec\version_major.h
+1760459835 d:\randomness\ffmpeg\include\libavcodec\version_major.h
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavcodec\defs.h
+1760459835 d:\randomness\ffmpeg\include\libavcodec\defs.h
 	<stdint.h>
 	<stdlib.h>
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavcodec\packet.h
+1760459835 d:\randomness\ffmpeg\include\libavcodec\packet.h
 	<stddef.h>
 	<stdint.h>
 	"libavutil/attributes.h"
@@ -180,14 +170,14 @@
 	"libavutil/version.h"
 	"libavcodec/version_major.h"
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\buffer.h
+1760459835 d:\randomness\ffmpeg\include\libavutil\buffer.h
 	<stddef.h>
 	<stdint.h>
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\dict.h
+1760459835 d:\randomness\ffmpeg\include\libavutil\dict.h
 	<stdint.h>
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavformat\avio.h
+1760459835 d:\randomness\ffmpeg\include\libavformat\avio.h
 	<stdint.h>
 	<stdio.h>
 	"libavutil/attributes.h"
@@ -195,13 +185,13 @@
 	"libavutil/log.h"
 	"libavformat/version_major.h"
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavformat\version_major.h
+1760459835 d:\randomness\ffmpeg\include\libavformat\version_major.h
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavformat\version.h
+1760459835 d:\randomness\ffmpeg\include\libavformat\version.h
 	"libavutil/version.h"
 	"version_major.h"
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\frame.h
+1760459835 d:\randomness\ffmpeg\include\libavutil\frame.h
 	<stddef.h>
 	<stdint.h>
 	"avutil.h"
@@ -213,7 +203,7 @@
 	"pixfmt.h"
 	"version.h"
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavcodec\codec.h
+1760459835 d:\randomness\ffmpeg\include\libavcodec\codec.h
 	<stdint.h>
 	"libavutil/avutil.h"
 	"libavutil/hwcontext.h"
@@ -224,13 +214,13 @@
 	"libavcodec/codec_id.h"
 	"libavcodec/version_major.h"
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\hwcontext.h
+1760459835 d:\randomness\ffmpeg\include\libavutil\hwcontext.h
 	"buffer.h"
 	"frame.h"
 	"log.h"
 	"pixfmt.h"
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavcodec\avcodec.h
+1760459835 d:\randomness\ffmpeg\include\libavcodec\avcodec.h
 	"libavutil/samplefmt.h"
 	"libavutil/attributes.h"
 	"libavutil/avutil.h"
@@ -250,15 +240,15 @@
 	"codec_desc.h"
 	"codec_par.h"
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavcodec\version.h
+1760459835 d:\randomness\ffmpeg\include\libavcodec\version.h
 	"libavutil/version.h"
 	"version_major.h"
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavcodec\codec_desc.h
+1760459835 d:\randomness\ffmpeg\include\libavcodec\codec_desc.h
 	"libavutil/avutil.h"
 	"codec_id.h"
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libswscale\swscale.h
+1760459835 d:\randomness\ffmpeg\include\libswscale\swscale.h
 	<stdint.h>
 	"libavutil/avutil.h"
 	"libavutil/frame.h"
@@ -267,24 +257,24 @@
 	"version_major.h"
 	"version.h"
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libswscale\version_major.h
+1760459835 d:\randomness\ffmpeg\include\libswscale\version_major.h
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libswscale\version.h
+1760459835 d:\randomness\ffmpeg\include\libswscale\version.h
 	"libavutil/version.h"
 	"version_major.h"
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\imgutils.h
+1760459835 d:\randomness\ffmpeg\include\libavutil\imgutils.h
 	<stddef.h>
 	<stdint.h>
 	"pixdesc.h"
 	"pixfmt.h"
 	"rational.h"
 
-1755863781 c:\users\ethan\dropbox\coding\demo\ffmpeg\include\libavutil\pixdesc.h
+1760459835 d:\randomness\ffmpeg\include\libavutil\pixdesc.h
 	<inttypes.h>
 	"attributes.h"
 	"pixfmt.h"
 
-1760441253 source:c:\users\ethan\dropbox\coding\demo\src\video.cpp
+1760586345 source:d:\randomness\src\video.cpp
 	"Video.h"
 

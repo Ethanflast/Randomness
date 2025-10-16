@@ -14,7 +14,7 @@ int main(int argc, char* args[]) {
     if (TTF_Init() == -1)
         std::cout << "TTF_Init failed: " << TTF_GetError() << std::endl;
 
-    RenderWindow window("GAME v1.0", 1280, 720);
+    RenderWindow window("Randomness", 1280, 720);
 
     TTF_Font* font = TTF_OpenFont("JetBrainsMono-Regular.ttf", 48);
     if (font == NULL)
