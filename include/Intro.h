@@ -4,6 +4,9 @@
 #include <SDL_ttf.h>
 #include <string>
 #include "Label.h"
+#include "Window.h"
+#include "FPSOverlay.h"
+
 class Intro {
 public:
     Intro(SDL_Renderer* renderer, TTF_Font* font, const std::string& firstText, const std::string& secondText, int screenW, int screenH, float fadeDuration = 1.0f, float holdDuration = 2.5f);
@@ -12,6 +15,7 @@ public:
     void update(float dt);
     void render();
     bool isDone() const;
+    void run(Window& window, FPSOverlay& fpsOverlay);
 private:
     enum State { FIRST_FADE_IN, FIRST_HOLD, FIRST_FADE_OUT, SECOND_FADE_IN, SECOND_HOLD, DONE };
     State state;

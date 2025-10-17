@@ -1,17 +1,25 @@
-#pragma once
+#ifndef WINDOW_H
+#define WINDOW_H
 #include <SDL.h>
 #include <SDL_image.h>
+#include <SDL_ttf.h>
+#include <string>
 
-class RenderWindow {
+class Window {
 public:
-    RenderWindow(const char* p_title, int p_w, int p_h);
-    SDL_Texture* loadTexture(const char* p_filePath);
-    void cleanUp();
+    Window(const char* title, int w, int h);
+    ~Window();
+
+    bool initSDL();
+    SDL_Texture* loadTexture(const std::string& path);
     void clear();
-    void render(SDL_Texture* p_tex);
+    void render(SDL_Texture* tex);
     void display();
-    SDL_Renderer* getRenderer() const { return renderer; }
+    void cleanUp();
+
+    SDL_Renderer* getRenderer() { return renderer; }
 private:
     SDL_Window* window;
     SDL_Renderer* renderer;
 };
+#endif

@@ -1,78 +1,31 @@
 #include <SDL.h>
-#include <SDL_image.h>
 #include <SDL_ttf.h>
+#include <SDL_image.h>
 #include <iostream>
 #include "Window.h"
 #include "Intro.h"
 #include "Video.h"
+#include "FPSOverlay.h"
 
-int main(int argc, char* args[]) {
-    if (SDL_Init(SDL_INIT_VIDEO) > 0)
-        std::cout << "SDL_Init failed: " << SDL_GetError() << std::endl;
-    if (!(IMG_Init(IMG_INIT_PNG)))
-        std::cout << "IMG_Init failed: " << SDL_GetError() << std::endl;
-    if (TTF_Init() == -1)
-        std::cout << "TTF_Init failed: " << TTF_GetError() << std::endl;
+int SDL_main(int argc, char* argv[]) {
+    Window window("Randomness", 1280, 720);
+    if (!window.initSDL()) return 1;
 
-    RenderWindow window("Randomness", 1280, 720);
+    FPSOverlay fpsOverlay;
+    fpsOverlay.init(window.getRenderer(), "JetBrainsMono-Regular.ttf", 20);
 
     TTF_Font* font = TTF_OpenFont("JetBrainsMono-Regular.ttf", 48);
-    if (font == NULL)
-        std::cout << "Font load failed: " << TTF_GetError() << std::endl;
+    if (!font) return 1;
 
-    Intro intro(window.getRenderer(), font, "Made by someone", "Welcome to the slayer", 1280, 720, 0.1f, 1.0f);
+    Intro intro(window.getRenderer(), font, "Made by someone", "Welcome to the slayer", 1280, 720);
     intro.start();
+    intro.run(window, fpsOverlay);
 
-    bool gameRunning = true;
-    SDL_Event event;
-    Uint32 last = SDL_GetTicks();
+    Video video(window.getRenderer(), "mambo.mp4");
+    if (video.open()) video.run(window, fpsOverlay, 0, 0, 1280, 720);
 
-    while (gameRunning) {
-        while (SDL_PollEvent(&event)) {
-            if (event.type == SDL_QUIT)
-                gameRunning = false;
-        }
-
-        Uint32 now = SDL_GetTicks();
-        float dt = (now - last) / 1000.0f;
-        last = now;
-
-        intro.update(dt);
-
-        SDL_SetRenderDrawColor(window.getRenderer(), 0, 0, 0, 255);
-        window.clear();
-        intro.render();
-        window.display();
-
-        if (intro.isDone()) break;
-    }
-
-    if (gameRunning) {
-        VideoPlayer video(window.getRenderer(), "mambo.mp4");
-        if (video.open()) {
-            while (gameRunning && !video.isFinished()) {
-                while (SDL_PollEvent(&event)) {
-                    if (event.type == SDL_QUIT) {
-                        gameRunning = false;
-                        break;
-                    }
-                }
-                video.update();
-                SDL_SetRenderDrawColor(window.getRenderer(), 0, 0, 0, 255);
-                window.clear();
-                video.render(0, 0, 1280, 720);
-                window.display();
-                SDL_Delay(5);
-            }
-        } else {
-            std::cout << "Failed to open video file" << std::endl;
-        }
-    }
-
+    fpsOverlay.free();
     TTF_CloseFont(font);
     window.cleanUp();
-    TTF_Quit();
-    IMG_Quit();
-    SDL_Quit();
     return 0;
 }

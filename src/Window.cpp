@@ -1,51 +1,39 @@
-#include <SDL.h>
-#include <SDL_image.h>
+#include "Window.h"
 #include <iostream>
 
-#include "Window.h"
-#include "Intro.h"
-#include "Label.h"
-
-RenderWindow::RenderWindow(const char* p_title, int p_w, int p_h)
-	:window(NULL), renderer(NULL)
+Window::Window(const char* title, int w, int h)
+    : window(nullptr), renderer(nullptr)
 {
-	window = SDL_CreateWindow(p_title, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, p_w, p_h, SDL_WINDOW_SHOWN);
-
-	if (window == NULL)
-	{
-		std::cout << "Window failed to init. Error: " << SDL_GetError() << std::endl;
-	}
-
-	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+    window = SDL_CreateWindow(title, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, w, h, SDL_WINDOW_SHOWN);
+    if (!window) std::cout << "Window creation failed: " << SDL_GetError() << std::endl;
+    renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+    if (!renderer) std::cout << "Renderer creation failed: " << SDL_GetError() << std::endl;
 }
 
-SDL_Texture* RenderWindow::loadTexture(const char* p_filePath)
-{
-	SDL_Texture* texture = NULL;
-	texture = IMG_LoadTexture(renderer, p_filePath);
-
-	if (texture == NULL)
-		std::cout << "Failed to load texture. Error: " << SDL_GetError() << std::endl;
-
-	return texture;
+Window::~Window() {
+    cleanUp();
 }
 
-void RenderWindow::cleanUp()
-{
-	SDL_DestroyWindow(window);
+bool Window::initSDL() {
+    if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) < 0) { std::cout << "SDL_Init failed: " << SDL_GetError() << std::endl; return false; }
+    if (!(IMG_Init(IMG_INIT_PNG))) { std::cout << "IMG_Init failed: " << SDL_GetError() << std::endl; return false; }
+    if (TTF_Init() == -1) { std::cout << "TTF_Init failed: " << TTF_GetError() << std::endl; return false; }
+    return true;
 }
 
-void RenderWindow::clear()
-{
-	SDL_RenderClear(renderer);
+SDL_Texture* Window::loadTexture(const std::string& path) {
+    SDL_Texture* tex = IMG_LoadTexture(renderer, path.c_str());
+    if (!tex) std::cout << "Failed to load texture: " << SDL_GetError() << std::endl;
+    return tex;
 }
 
-void RenderWindow::render(SDL_Texture* p_tex)
-{
-	SDL_RenderCopy(renderer, p_tex, NULL, NULL);
-}
+void Window::clear() { SDL_RenderClear(renderer); }
+void Window::render(SDL_Texture* tex) { SDL_RenderCopy(renderer, tex, nullptr, nullptr); }
+void Window::display() { SDL_RenderPresent(renderer); }
 
-void RenderWindow::display()
-{
-	SDL_RenderPresent(renderer);
+void Window::cleanUp() {
+    if (renderer) SDL_DestroyRenderer(renderer);
+    if (window) SDL_DestroyWindow(window);
+    renderer = nullptr;
+    window = nullptr;
 }
