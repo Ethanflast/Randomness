@@ -4,6 +4,7 @@
 /Debug/
 /Release/
 /Setups/
+/ffmpeg/
 
 # CodeBlocks files
 *.cbp
